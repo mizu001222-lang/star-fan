@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script>if(location.protocol!=='https:'&&location.protocol!=='file:'&&location.hostname!=='localhost'&&location.hostname!=='127.0.0.1')location.replace('https:'+location.href.substring(location.protocol.length));</script>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회사 소개 | 스타환풍기 — 공업용 환풍기 교체·설치 전문</title>
+<meta name="description" content="스타환풍기(스타건설) 회사 소개. 대표 홍광표의 인사말, 시공 철학, 전문 분야, 회사 연혁을 확인하세요.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fan.starhome-enc.com/about.html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent:#3D5A3E; --accent-soft:#7DA87F;
+    --dark:#1C1F1B; --darker:#141614;
+    --bg:#F5F2EA; --panel:#E8E3D5; --bg-trans:rgba(245,242,234,.85); --ink:#1C1F1B;
+    --display:'Cormorant Garamond',serif;
+    --sec:110px; --px:64px; --h-scale:1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Pretendard',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:#F5F2EA}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+
+  /* 플레이스홀더 */
+  .ph{background:linear-gradient(135deg,#D8D4C8 0%,#C8C4B5 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8A8275}
+  .ph svg{opacity:.45}
+  .ph span{font-size:12px;letter-spacing:.06em;opacity:.7}
+
+  /* 네비 */
+  .nav-links a{text-decoration:none}
+  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:70}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mob-nav{display:none;position:fixed;inset:0;z-index:65;background:rgba(245,242,234,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:40px 24px}
+  .mob-nav.open{display:flex}
+  .mob-nav a{text-decoration:none;color:var(--ink);font-size:21px;font-weight:600}
+  .mob-nav .mob-cta{background:var(--accent);color:#F5F2EA;padding:14px 30px;border-radius:40px;font-size:17px}
+
+  /* 페이지 히어로 */
+  .page-hero{padding:160px var(--px) 90px;background:var(--darker);color:#F5F2EA;text-align:center}
+  .page-hero .sub{font-family:var(--display);font-size:13px;letter-spacing:.36em;color:var(--accent-soft);text-transform:uppercase;margin-bottom:18px}
+  .page-hero h1{font-size:calc(52px * var(--h-scale));font-weight:700;letter-spacing:-.025em;line-height:1.15}
+  .page-hero p{font-size:17px;color:#A5A89E;margin-top:22px;line-height:1.75;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* 섹션 공통 */
+  .sec-label{font-family:var(--display);font-size:13px;letter-spacing:.32em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
+  .sec-title{font-size:calc(38px * var(--h-scale));font-weight:700;letter-spacing:-.025em;line-height:1.25}
+
+  /* 인사말 */
+  .greeting-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;max-width:1340px;margin:0 auto}
+  .greeting-photo{aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--panel)}
+
+  /* 연혁 타임라인 */
+  .timeline{max-width:760px;margin:0 auto;position:relative}
+  .timeline::before{content:'';position:absolute;left:18px;top:6px;bottom:6px;width:2px;background:rgba(61,90,62,.2)}
+  .tl-item{display:flex;gap:36px;padding:0 0 40px 0;position:relative}
+  .tl-dot{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#F5F2EA;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;letter-spacing:.04em}
+  .tl-body{padding-top:6px}
+  .tl-year{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.1em;margin-bottom:6px}
+  .tl-text{font-size:16px;font-weight:600;line-height:1.5;margin-bottom:4px}
+  .tl-desc{font-size:14px;color:#6A6D64;line-height:1.7}
+
+  /* 전문 분야 카드 */
+  .field-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1340px;margin:0 auto}
+  .field-card{background:var(--bg);border:1px solid rgba(28,31,27,.08);border-radius:14px;padding:36px 30px}
+  .field-icon{width:52px;height:52px;background:rgba(61,90,62,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+  .field-icon svg{color:var(--accent)}
+  .field-card h3{font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em}
+  .field-card p{font-size:14px;line-height:1.8;color:#6A6D64}
+  .field-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .field-tag{font-size:12px;background:var(--panel);padding:5px 12px;border-radius:20px;color:#5A5D56;font-weight:500}
+
+  /* 시공 철학 */
+  .value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1340px;margin:0 auto}
+  .value-card{background:var(--bg);border-radius:14px;padding:36px 34px;display:flex;gap:24px;align-items:flex-start}
+  .value-num{font-family:var(--display);font-size:42px;font-weight:600;color:rgba(61,90,62,.2);line-height:1;flex-shrink:0;width:48px}
+  .value-card h3{font-size:18px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+  .value-card p{font-size:14px;line-height:1.85;color:#6A6D64}
+
+  /* 사업자 정보 */
+  .info-table{max-width:760px;margin:0 auto;border-top:1px solid rgba(28,31,27,.1)}
+  .info-row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid rgba(28,31,27,.07);padding:18px 0}
+  .info-label{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.04em}
+  .info-value{font-size:15px;line-height:1.7;color:#3A3D38}
+
+  /* CTA */
+  .cta-band{background:var(--accent);color:#F5F2EA;padding:70px var(--px);text-align:center}
+  .cta-band h2{font-size:calc(34px * var(--h-scale));font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+  .cta-band p{font-size:16px;color:rgba(245,242,234,.75);margin-bottom:36px}
+  .cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .btn-white{background:#F5F2EA;color:var(--accent);font-weight:700;font-size:16px;padding:16px 34px;border-radius:44px;text-decoration:none;display:inline-block}
+  .btn-outline{background:transparent;color:#F5F2EA;font-size:16px;font-weight:600;padding:16px 34px;border-radius:44px;border:1px solid rgba(245,242,234,.4);text-decoration:none;display:inline-block}
+
+  /* 반응형 */
+  @media(max-width:768px){
+    :root{--px:20px;--sec:72px;--h-scale:.72}
+    .nav-links{display:none !important}
+    .hamburger{display:flex !important}
+    .greeting-grid{grid-template-columns:1fr !important;gap:36px}
+    .greeting-photo{aspect-ratio:16/9 !important}
+    .field-grid{grid-template-columns:1fr !important}
+    .value-grid{grid-template-columns:1fr !important}
+    .info-row{grid-template-columns:130px 1fr}
+    .footer-links{gap:28px !important}
+  }
+  @media(min-width:769px) and (max-width:1024px){
+    :root{--px:36px;--h-scale:.85}
+    .field-grid{grid-template-columns:1fr 1fr !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- 모바일 내비 -->
+<div class="mob-nav" id="mob-nav">
+  <a href="index.html">홈</a>
+  <a href="Portfolio.html">시공사례</a>
+  <a href="about.html" style="color:var(--accent)">회사소개</a>
+  <a href="index.html#faq">자주묻는질문</a>
+  <a href="tel:01073601917" class="mob-cta">전화상담</a>
+</div>
+
+<div style="width:100%;overflow-x:hidden;background:var(--bg)">
+
+  <!-- NAV -->
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px var(--px);background:rgba(20,22,20,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,242,234,.07)">
+    <a href="index.html" style="text-decoration:none;color:#F5F2EA;display:flex;flex-direction:column;line-height:1">
+      <span style="font-size:22px;font-weight:700;letter-spacing:-.01em">스타환풍기</span>
+      <span style="font-family:var(--display);font-size:10px;letter-spacing:.3em;color:var(--accent-soft);margin-top:3px;text-transform:uppercase">Star Ventilation</span>
+    </a>
+    <nav class="nav-links" style="display:flex;align-items:center;gap:38px">
+      <a href="index.html" style="text-decoration:none;color:#A5A89E;font-size:15px;font-weight:500">홈</a>
+      <a href="Portfolio.html" style="text-decoration:none;color:#A5A89E;font-size:15px;font-weight:500">시공사례</a>
+      <a href="about.html" style="text-decoration:none;color:#F5F2EA;font-size:15px;font-weight:600;border-bottom:2px solid var(--accent-soft);padding-bottom:2px">회사소개</a>
+      <a href="index.html#faq" style="text-decoration:none;color:#A5A89E;font-size:15px;font-weight:500">자주묻는질문</a>
+      <a href="tel:01073601917" style="text-decoration:none;background:var(--accent);color:#F5F2EA;font-size:14px;font-weight:600;padding:11px 22px;border-radius:40px">전화상담</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="메뉴" style="filter:invert(1)">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="sub">About 스타환풍기</div>
+    <h1>현장을 아는 사람이<br>만드는 환경</h1>
+    <p>스타환풍기(스타건설)는 공업용 환풍기 교체·설치만을 전문으로 합니다.<br>정직한 시공, 꼼꼼한 마감, 빠른 완공으로 현장의 공기를 바꿉니다.</p>
+  </section>
+
+  <!-- ① 대표 인사말 -->
+  <section style="padding:var(--sec) var(--px)">
+    <div class="greeting-grid">
+      <div>
+        <div class="sec-label">CEO Message</div>
+        <h2 class="sec-title">대표 인사말</h2>
+        <p style="font-size:16px;line-height:1.95;color:#5A5D56;margin-top:28px">
+          안녕하세요, 스타환풍기 대표 홍광표입니다.<br><br>
+          오래된 환풍기 하나가 공장 전체의 작업 환경을 망치기도 하고, 식당 주방의 냄새를 잡지 못해 손님이 발길을 끊기도 합니다. 저는 그런 현장을 직접 보면서 "제대로 된 환풍기 하나가 공간을 바꾼다"는 것을 몸으로 배웠습니다.<br><br>
+          저희는 전화로 견적을 내지 않습니다. 어떤 현장이든 직접 방문해 공간의 크기, 용도, 기존 설비 상태를 눈으로 확인한 뒤에야 제품을 권합니다. 공장이든, 식당이든, 어린이집이든 현장마다 맞는 답이 다르기 때문입니다.<br><br>
+          빠르게 끝내는 것보다 오래 쓸 수 있게 하는 것, 그리고 시공 후에도 문제가 생기면 바로 달려가는 것. 그것이 스타환풍기가 일하는 방식입니다.
+        </p>
+        <div style="margin-top:36px;display:flex;align-items:center;gap:16px">
+          <div style="width:54px;height:54px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div style="font-size:16px;font-weight:700">홍광표</div>
+            <div style="font-size:13px;color:var(--accent);margin-top:2px">스타건설 대표 / 스타환풍기</div>
+          </div>
+        </div>
+      </div>
+      <div class="greeting-photo">
+        <img src="assets/대표님 사진.jpg" alt="스타환풍기 대표 홍광표" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 전문 분야 -->
+  <section style="padding:var(--sec) var(--px)">
+    <div style="max-width:1340px;margin:0 auto;text-align:center;margin-bottom:60px">
+      <div class="sec-label">Specialty</div>
+      <h2 class="sec-title">전문 분야</h2>
+      <p style="font-size:16px;color:#6A6D64;margin-top:16px;line-height:1.7">현장 유형에 맞는 맞춤 시공을 제공합니다</p>
+    </div>
+    <div class="field-grid">
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>공장 · 작업실</h3>
+        <p>고압팬 교체, 대형 산업용 환풍기 설치. 열기·분진·유해가스 배출이 필요한 제조·작업 환경에 최적화된 시공.</p>
+        <div class="field-tags">
+          <span class="field-tag">고압팬 교체</span>
+          <span class="field-tag">산업용 환기</span>
+          <span class="field-tag">분진 배출</span>
+        </div>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v4l-4-4H9a1.994 1.994 0 0 1-1.414-.586"/><path d="M3 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5l-4 4V4z"/></svg>
+        </div>
+        <h3>식당 · 구내식당</h3>
+        <p>주방 환풍기 교체 및 덕트 연결. 조리 연기·냄새 배출 효율을 높이고 위생 환경을 개선하는 시공.</p>
+        <div class="field-tags">
+          <span class="field-tag">주방 환풍기</span>
+          <span class="field-tag">덕트 연결</span>
+          <span class="field-tag">후황 시공</span>
+        </div>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>어린이집 · 시설</h3>
+        <p>초강력 환기팬 신규 설치. 안전하고 쾌적한 실내 공기질을 위한 정밀 시공. 법적 환기 기준에 맞는 풍량 설계.</p>
+        <div class="field-tags">
+          <span class="field-tag">환기팬 설치</span>
+          <span class="field-tag">공기질 개선</span>
+          <span class="field-tag">실내 환경</span>
+        </div>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>지식산업센터 · 오피스</h3>
+        <p>에어컨 실외기실 환풍기, 기계실 환기 설비 설치. 건물 관리자와 협의 후 최적의 설치 위치와 용량을 선정.</p>
+        <div class="field-tags">
+          <span class="field-tag">실외기실 환풍기</span>
+          <span class="field-tag">기계실 환기</span>
+          <span class="field-tag">용량 설계</span>
+        </div>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>A/S · 점검</h3>
+        <p>시공 후 작동 불량, 소음, 진동 등 문제 발생 시 빠르게 출동합니다. 기존 설비 상태 점검 및 유지보수도 가능.</p>
+        <div class="field-tags">
+          <span class="field-tag">사후 A/S</span>
+          <span class="field-tag">소음·진동 점검</span>
+          <span class="field-tag">유지보수</span>
+        </div>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41"/></svg>
+        </div>
+        <h3>현장 실측 · 무료 상담</h3>
+        <p>전화 한 통이면 현장에 직접 방문합니다. 공간 크기, 용도, 기존 덕트 상태에 맞는 최적 제품과 비용을 안내드립니다.</p>
+        <div class="field-tags">
+          <span class="field-tag">무료 현장 방문</span>
+          <span class="field-tag">제품 선정 상담</span>
+          <span class="field-tag">비용 안내</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 시공 철학 -->
+  <section style="padding:var(--sec) var(--px);background:var(--panel)">
+    <div style="max-width:1340px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:60px">
+        <div class="sec-label">Our Values</div>
+        <h2 class="sec-title">시공 철학</h2>
+        <p style="font-size:16px;color:#6A6D64;margin-top:16px;line-height:1.7">스타환풍기가 일하는 방식</p>
+      </div>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-num">01</div>
+          <div>
+            <h3>현장 실측 후 시공</h3>
+            <p>사진이나 전화만으로 견적을 내지 않습니다. 반드시 현장에 방문해 공간 크기, 덕트 경로, 기존 설비 상태를 직접 확인한 뒤 제품을 선정합니다.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">02</div>
+          <div>
+            <h3>숨겨진 비용 없는 투명 견적</h3>
+            <p>부품비, 출장비, 철거비 모두 사전에 안내합니다. 시공 중 추가 비용이 발생할 경우 반드시 먼저 말씀드리고 진행합니다.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">03</div>
+          <div>
+            <h3>당일 완공</h3>
+            <p>대부분의 환풍기 교체·설치는 당일 완공이 가능합니다. 현장 운영에 지장이 없도록 최대한 빠르게 마무리합니다.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">04</div>
+          <div>
+            <h3>꼼꼼한 마감과 A/S 보장</h3>
+            <p>시공 후 작동 테스트까지 완료해야 현장을 떠납니다. 시공 후 문제가 생기면 신속하게 재방문해 해결합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 사업자 정보 -->
+  <section style="padding:var(--sec) var(--px)">
+    <div style="max-width:1340px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:60px">
+        <div class="sec-label">Company Info</div>
+        <h2 class="sec-title">사업자 정보</h2>
+        <p style="font-size:16px;color:#6A6D64;margin-top:16px;line-height:1.7">믿고 맡길 수 있는 정식 등록 업체</p>
+      </div>
+      <div class="info-table">
+        <div class="info-row">
+          <span class="info-label">상호명</span>
+          <span class="info-value">스타건설 (스타환풍기)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">대표자</span>
+          <span class="info-value">홍광표</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">사업자등록번호</span>
+          <span class="info-value">824-45-01084</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">소재지</span>
+          <span class="info-value">경기도 수원시 권선구 망포로 13, 111동 1201호</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">연락처</span>
+          <span class="info-value">010-2175-4342</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">이메일</span>
+          <span class="info-value">hongstarhome@naver.com</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">시공 지역</span>
+          <span class="info-value">전국 출장 가능 (수도권·경기·인천 당일 출장)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">영업 시간</span>
+          <span class="info-value">연중 무휴 (상담 가능 시간 09:00 – 21:00)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <h2>지금 바로 상담하세요</h2>
+    <p>현장 방문 견적은 무료입니다. 전화 한 통으로 시작하세요.</p>
+    <div class="cta-btns">
+      <a href="tel:01073601917" class="btn-white">📞 010-7360-1917</a>
+      <a href="Portfolio.html" class="btn-outline">시공 사례 보기</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--darker);color:#A5A89E;padding:58px var(--px) 42px">
+    <div class="footer-inner" style="max-width:1340px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px">
+      <div>
+        <div style="display:flex;flex-direction:column;line-height:1;margin-bottom:18px">
+          <span style="font-size:24px;font-weight:700;color:var(--bg)">스타환풍기</span>
+          <span style="font-family:var(--display);font-size:10px;letter-spacing:.24em;color:var(--accent-soft);margin-top:4px;text-transform:uppercase">공업용 환풍기 교체·설치 전문</span>
+        </div>
+        <p style="font-size:14px;line-height:1.7;max-width:300px">공장·식당·상가·주거시설 환풍기 교체 및 신규 설치 전문.<br>전국 어디든 찾아갑니다.</p>
+      </div>
+      <div class="footer-links" style="display:flex;gap:56px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;color:#5A5D56;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">Menu</span>
+          <a href="index.html" style="color:#A5A89E;text-decoration:none;font-size:14px">홈</a>
+          <a href="Portfolio.html" style="color:#A5A89E;text-decoration:none;font-size:14px">시공사례</a>
+          <a href="about.html" style="color:#F5F2EA;text-decoration:none;font-size:14px">회사소개</a>
+          <a href="index.html#faq" style="color:#A5A89E;text-decoration:none;font-size:14px">자주묻는질문</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;color:#5A5D56;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">Contact</span>
+          <a href="tel:01073601917" style="color:#A5A89E;text-decoration:none;font-size:14px">010-7360-1917</a>
+          <a href="mailto:hongstarhome@naver.com" style="color:#A5A89E;text-decoration:none;font-size:14px">hongstarhome@naver.com</a>
+          <span style="font-size:14px">연중 무휴</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;color:#5A5D56;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">Info</span>
+          <span style="font-size:14px">대표 홍광표</span>
+          <span style="font-size:14px;line-height:1.6">경기도 수원시 권선구<br>망포로 13, 111동 1201호</span>
+          <span style="font-size:14px">시공지역 · 전국 출장 가능</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1340px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(245,242,234,.08);font-size:12px;color:#5A5D56;line-height:1.8">© 2026 스타건설. All rights reserved. · 대표 홍광표 · 사업자등록번호 824-45-01084 · 경기도 수원시 권선구 망포로 13, 111동 1201호</div>
+  </footer>
+
+  <!-- 플로팅 CTA -->
+  <div style="position:fixed;right:26px;bottom:26px;z-index:60;display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+    <a href="https://talk.naver.com/profile/w6t40we" target="_blank" rel="noopener" style="background:#03C75A;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:13px 20px;border-radius:44px;box-shadow:0 8px 28px rgba(3,199,90,.35);display:flex;align-items:center;gap:8px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+      네이버 톡톡 문의
+    </a>
+    <a href="tel:01073601917" style="background:var(--accent);color:#F5F2EA;text-decoration:none;font-size:15px;font-weight:600;padding:15px 24px;border-radius:44px;box-shadow:0 8px 28px rgba(20,22,18,.32);display:flex;align-items:center;gap:9px">📞 전화상담</a>
+  </div>
+
+</div>
+
+<script>
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mob-nav');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+mob.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
